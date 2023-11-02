@@ -6,20 +6,32 @@ import com.example.Application.ECommerce.services.IceCreamService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 @Controller
 public class MainController {
     private final IceCreamService iceCreamService;
+    IcecreamRepository icecreamRepository;
 
     public MainController(IceCreamService iceCreamService) {
         this.iceCreamService = iceCreamService;
     }
 
+    @GetMapping("/")
+    public String home(){
+        return "index";
+    }
     @GetMapping("/test")
     public ResponseEntity<?> getAllProducts() {
         List<IceCream> ices = iceCreamService.findAll();
         return new ResponseEntity<>(ices, HttpStatus.OK);
+    }
+    @GetMapping("/icecreams")
+    public String showIceCreamList(Model model) {
+
+        model.addAttribute("icecreams", iceCreamService.findAll());
+        return "product";
     }
 }

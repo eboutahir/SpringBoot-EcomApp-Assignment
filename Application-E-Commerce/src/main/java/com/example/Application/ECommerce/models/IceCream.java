@@ -23,16 +23,15 @@ public class IceCream {
     private Long id;
     @NotNull(message = "Fill in the input field")
     private Integer price;
-    @NotBlank(message = "Fill in the input field")
-    private String icecreamTitle;
+
     @NotBlank(message = "Fill in the input field")
 
     private String poids;
     @NotBlank(message = "Fill in the input field")
     private String description;
-    @NotBlank(message = "Fill in the input field")
+
     private String icecreamSaveur;
-    @NotBlank(message = "Fill in the input field")
+
     private String image;
 
 }
