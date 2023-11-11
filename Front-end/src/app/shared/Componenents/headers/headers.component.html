@@ -1,0 +1,18 @@
+<nav>
+  <div class="container">
+    <div class="content">
+      <h2 class="logo">EcomApp</h2>
+      <ul>
+        <a routerLink="/home">Products</a>
+        <a routerLink="/carts">Carts</a>
+        <a routerLink="/login" *ngIf="Auth">Login</a>
+        <a routerLink="/register" *ngIf="Auth">Register</a>
+        <a routerLink="/logout" *ngIf="!Auth">Logout</a>
+
+
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
