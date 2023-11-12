@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Two Boutique en ligne - Panier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <a href="index.html">Boutique de vêtements</a>
+            </div>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+                <!-- Ajout de l'icône de panier -->
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Se connecter</a>
+            <a href="register.html">S'inscrire</a>
+        </div>
+    </header>
+
+    <section class="cartContainer" >
+       <div class="cart"> 
+       <div class="tile">
+         <h2>Votre panier</h2>
+         <div class="border"></div>
+        
+       </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Description</th>
+                    <th>Prix unitaire</th>
+                    <th>Quantité</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ajoutez ici les lignes pour chaque produit dans le panier -->
+                <tr>
+                    <td><img src="img/product1.jpg" alt="Produit 1"></td>
+                    <td><p>Chemise élégante</p></td>
+                    <td>50,00 €</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>50,00 €</td>
+                </tr>
+
+                <tr>
+                    <td><img src="img/product1.jpg" alt="Produit 1"></td>
+                    <td><p>Chemise élégante</p></td>
+                    <td>50,00 €</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>50,00 €</td>
+                </tr>
+                <!-- Ajoutez d'autres lignes au besoin -->
+                <tr>
+                    <td ><p>Total du panier :</p></td>
+                    <td  > <span>50,00 €</span></td>
+                    <td colspan="4"><button  >Passer la commande</button></td>
+                     
+                </tr>
+            </tbody>
+        </table>
+       
+       </div> 
+       <div class="cart-summary">
+      
+    </div>
+    </section>
+
+    <footer>
+        <!-- ... (comme précédemment) -->
+    </footer>
+</body>
+
+</html>

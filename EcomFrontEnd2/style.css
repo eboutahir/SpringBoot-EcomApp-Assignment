@@ -1,0 +1,630 @@
+/* إعدادات عامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* تخطيط الصفحة الرئيسية */
+header {
+    background-color: #d5461e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+}
+
+.user-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Héros */
+.hero {
+    text-align: center;
+    padding: 40px;
+    background-image: url("img/background.png");
+    background-size: cover; 
+        background-color: #fff;
+        height: 250px;
+}
+ 
+
+.hero h1 {
+    font-size: 36px;
+    color: #8A4C5C;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #8A4C5C;
+    margin-bottom: 20px;
+}
+
+.hero .button {
+    display: inline-block;
+    background-color:#8A4C5C;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: 1px solid #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #C56A50;
+
+}
+
+
+/* تخصيص المناطق */
+.featured-products,
+.new-arrivals,
+.newsletter,
+.hero {
+    text-align: center;
+}
+
+/* Style pour la section "Produits en vedette" */
+.featured-products {
+    text-align: center;
+    padding: 20px;
+    padding-top: 40px;
+    background-color: #D9B5A6;
+    height: 480px;
+ 
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat( 3,1fr) ; /* Create a responsive grid */
+    gap: 5px;    
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat( 1, 1fr) ; /* Adjust for smaller screens */
+    }
+    .newsletter  h2{
+        
+        width: 100%;
+        }
+    }
+
+/* Add responsive styles for even smaller screens */
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat( 1, 1fr) ; /* Adjust for mobile screens */
+    }
+
+    .product {
+        width: 100%; /* Make each product take the full width on small screens */
+    }
+    .newsletter  h2{
+        
+        width: 100%;
+        }
+}
+
+.featured-products h2 {
+    font-size: 24px;
+    color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 290px;
+    background-color: #8A4C5C;
+    border-radius: 35px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Style pour la bordure autour de featured-products */
+.border {
+    border: 2px solid #f9f9f9;
+    border-radius: 10px;
+    margin: 5px auto;
+    width: 10%;
+    position: relative;
+    top: -290px;
+}
+
+/* .product {
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    max-height: 350px;
+    position: relative;
+    top: -290px;
+
+} */
+
+.product img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #8A4C5C;
+}
+
+.product p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #8A4C5C;
+
+}
+
+
+
+/* Catégories */
+/* Styles for the "Catégories" section using CSS Grid */
+.categories {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Create a responsive grid */
+    gap: 20px; /* Gap between grid items */
+}
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8A4C5C;
+    text-transform: capitalize;
+}
+
+.category {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s; position: relative;
+ }
+
+.category img {
+    max-width: 100%;
+ }
+
+.category h3 {
+    font-size: 18px;
+    color:  whitesmoke;    
+     position: absolute;
+    bottom: -10px;;
+    padding: 5px;
+    background-color:  #8A4C5C;
+    border-radius: 0 10px 0  10px;
+}
+
+ 
+
+.category:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+
+
+
+.tile .border{
+     width: 20%;
+    position: relative;
+    top: -15px;
+    border-color: #8A4C5C;}
+ 
+
+
+
+.newsletter{padding: 20px;}
+
+.newsletter  h2{
+    font-size: 24px;
+    color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 170px;
+    background-color: #8A4C5C;
+    border-radius: 35px;
+    width: 80%;
+    margin: 0 auto;}
+  /* Responsive styles */
+@media only screen and (max-width: 768px) {
+  
+    .newsletter  h2{
+        font-size: 24px;
+        color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px 0;
+        padding-bottom: 170px;
+        background-color: #8A4C5C;
+        border-radius: 35px;
+        width: 100%;
+        margin: 0 auto;}
+ }
+  
+
+    .newsletter   .border {
+        position: relative;
+       top: -160px;
+       color: #ccc;
+   }
+/* تخصيص النموذج */
+.newsletter form {
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    top: -135px;
+    width: 80%;
+}
+.newsletter .p  {
+    margin-top: 20px;
+    position: relative;
+    top: -130px;color: #ccc;
+}
+input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* تكملة تخصيص القائمة */
+nav ul li a {
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* تخصيص عناصر النشرة الإخبارية */
+.newsletter input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newsletter button[type="submit"]  {
+    background-color: #8A4C5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: solid 1px #ccc;
+}
+
+.newsletter button[type="submit"]:hover {
+    background-color: #67303ef3;
+}
+
+/* تخصيص الفوتر */
+footer p {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* تخصيص الأزرار التفاعلية */
+
+
+/* تخصيص العروض الترويجية أو الشرائط الإعلانية */
+.promo-banner {
+    background-color: #d5461e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.promo-banner a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.promo-banner h2 { 
+    width: 96%;
+    border-right: #fff solid 15px;
+    border-left: #fff solid 15px;
+    margin: 0 auto;
+ padding: 5px 0;
+margin-bottom: 8px;
+}
+@media only screen and (max-width: 768px) {
+  
+    .promo-banner h2 {
+        border-right: #fff solid  10px;
+        border-left: #fff solid 10px;
+ }
+}
+.promo-banner a:hover {
+border-bottom: solid 1px #e1e1e1;    
+}
+
+
+
+.promo-banner .img {
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.promo-banner .img img {
+    width: 99%;
+    height: 100%; 
+    /* border-radius: 45px; */ 
+
+}
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+.cartContainer{ 
+    display: flex;
+    flex-direction: column;
+     padding: 20px;
+  }
+
+
+
+.cart {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+.cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8A4C5C;
+    text-transform: capitalize; text-align: center;
+} 
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    border-spacing: 0 10px; 
+    margin-bottom: 20px;
+    color: #fff ;
+    border-radius:  15px;
+
+}
+
+th:first-child,
+td:first-child {
+    padding: 10px ; border-radius: 15px 0 0 15px;
+ 
+ }
+ th:last-child,
+td:last-child {
+    padding: 10px ; border-radius:0  15px  15px 0;
+ 
+ }
+tr,th {   
+     /* border: 5px solid #8A4C5C; */
+      background-color: #8A4C5C;  
+     /* margin-bottom: 5px; */
+}
+  
+ 
+th,tr:last-child {
+    background-color: #C56A50;
+} 
+ 
+.cart-summary {
+     
+    padding: 20px;
+     
+}
+
+.cart-summary p {
+    margin-bottom: 10px;
+}
+td input {
+    background-color: #8A4C5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: solid 1px #ccc;
+    max-width: 40px; outline: none;
+}
+
+td button  {
+    background-color: #C56A50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: solid 1px #ccc;
+}
+td button{width: 100%;} 
+td button:hover {
+    background-color: #cd6042;
+
+ }
+ 
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .cart {
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+ }
+
+  td img {
+    height: 60px; 
+    border-radius: 15px;
+    background-color: #d5461e;
+    padding: 1px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+/* Ajoutez vos styles CSS ici */
+
+/* Section des produits avec Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%; margin: 0 auto;
+}
+
+.product {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.product img {
+    max-height: 100px;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #8A4C5C;
+}
+
+.product p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #8A4C5C;
+}
+
+
+.button {
+    display: inline-block;
+    background-color: transparent;
+    color: #8A4C5C;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    border: #8A4C5C solid 1px;
+}
+
+.button:hover {
+    background-color: #C56A50;    color: #8A4C5C;
+
+}
