@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::body})">
+<head>
+	<meta charset="UTF-8" />
+	<title>المستند</title>
+</head>
+<body>
+
+<br>
+<br>
+
+<div class="container">
+	<form action="/order/processing-order" method="POST" class="row">
+
+		<input type="hidden" name="user_id" th:value="${user.id}">
+
+		<div class="col-md-6 my-3">
+
+			<div class="card">
+
+				<div class="card-body">
+
+					<h3 class="text-center fw-bold mb-3">العناصر المحددة:</h3>
+					<div class="cart-body"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-6 my-3">
+
+			<div class="card">
+
+				<div class="card-body">
+
+					<h3 class="text-center fw-bold mb-3">تفاصيلك للطلب</h3>
+
+					<div class="form-floating mb-3">
+						<input readonly="readonly" class="form-control" id="floatingInput"
+							   th:value="${user.email}"> <label
+							for="floatingInput">عنوان البريد الإلكتروني</label>
+					</div>
+
+					<div class="form-floating mb-3">
+						<input readonly="readonly" class="form-control" id="floatingInput"
+							   placeholder="جون دو" th:value="${user.name}"> <label
+							for="floatingInput">الاسم الكامل</label>
+					</div>
+
+					<div class="form-floating mb-3">
+						<input readonly="readonly" class="form-control" id="floatingInput"
+							   name="pincode"
+							   placeholder="الرمز البريدي" th:value="${pincode}"> <label
+							for="floatingInput">الرمز البريدي <span class="text-danger fs-10">(يتم إنشاءه تلقائيًا، يجب عليك توفيره للسائق للتأكيد.)</span></label>
+					</div>
+
+					<div class="form-floating mb-3">
+						<textarea name="address" required="required" class="form-control" placeholder="أدخل عنوانك"></textarea>
+						<label>أدخل عنوانك</label>
+					</div>
+
+					<button class="btn primary-background text-white col-8 offset-2" type="submit">اطلب الآن</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</form>
+</div>
+
+</body>
+</html>

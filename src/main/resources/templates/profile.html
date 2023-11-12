@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" xmlns:th="http://www.thymeleaf.org"
+	  th:replace="base::Layout(~{::body})">
+<head>
+	<meta charset="UTF-8" />
+	<title>المستند</title>
+</head>
+<body>
+
+<div class="container-xl px-4 mt-4">
+	<!-- تنقل صفحة الحساب -->
+	<nav class="nav nav-borders">
+		<a class="nav-link active ms-0"
+		   href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details"
+		   target="__blank">الملف الشخصي</a>
+	</nav>
+
+	<hr class="mt-0 mb-4">
+	<form action="/profile/action" method="POST" class="row">
+		<div class="col-xl-4">
+			<!-- بطاقة صورة الملف الشخصي -->
+			<div class="card mb-4 mb-xl-0">
+				<div class="card-header">صورة الملف الشخصي</div>
+				<div class="card-body text-center">
+					<!-- صورة الملف الشخصي -->
+
+					<div class="preview">
+						<img class="rounded-circle text-center" height="110" width="110"
+							 th:src="'/images/'+${user.profile}" id="file-ip-1-preview">
+					</div>
+
+					<br> <label for="file-ip-1"
+								class="btn primary-background text-white">تحميل الصورة</label> <input
+						name="profile_image" type="file" id="file-ip-1"
+						style="display: none;" accept="image/*"
+						onchange="showPreview(event);">
+
+
+					<!-- مساعدة صورة الملف الشخصي -->
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-8">
+			<!-- بطاقة تفاصيل الحساب -->
+			<div class="card mb-4">
+				<div class="card-header">تفاصيل الحساب</div>
+				<div class="card-body">
+					<form>
+						<!-- مجموعة النموذج (اسم المستخدم)-->
+						<div class="mb-3">
+							<label class="small mb-1" for="inputUsername">عنوان
+								البريد الإلكتروني <span class="text-danger">(غير قابل للتغيير)</span>
+							</label> <input class="form-control" id="inputUsername"
+											readonly="readonly" th:value="${user.email}">
+						</div>
+						<!-- صف النموذج-->
+						<div class="row gx-3 mb-3">
+							<!-- مجموعة النموذج (الاسم الكامل)-->
+							<div class="col-md-6">
+								<label class="small mb-1" for="inputFirstName">الاسم
+									الكامل</label> <input class="form-control" id="inputFirstName"
+														  type="text" th:value="${user.name}">
+							</div>
+							<!-- مجموعة النموذج (رقم الهاتف)-->
+							<div class="col-md-6">
+								<label class="small mb-1" for="inputLastName">رقم
+									الهاتف</label> <input class="form-control" id="inputLastName"
+														  type="number" th:value="${user.phone}">
+							</div>
+						</div>
+						<!-- صف النموذج        -->
+
+						<!-- مجموعة النموذج (اسم المنظمة)-->
+
+						<label class="small mb-1" for="inputOrgName">دورك
+							المحدد <span class="text-danger">(غير قابل للتغيير)</span>
+						</label> <input class="form-control" id="inputOrgName"
+										readonly="readonly"
+										th:value="${user.role == 'ROLE_SELLER'} ? 'البائع' : 'العميل'">
+
+						<br>
+
+
+
+
+						<!-- صف النموذج-->
+						<div class="row gx-3 mb-3">
+							<!-- مجموعة النموذج (رقم الهاتف)-->
+							<div class="col-md-6">
+								<label class="small mb-1" for="inputPhone">كلمة
+									المرور الحالية</label> <input class="form-control" id="inputPhone"
+																  type="password" placeholder="كلمة المرور الحالية">
+							</div>
+							<!-- مجموعة النموذج (تاريخ الميلاد)-->
+							<div class="col-md-6">
+								<label class="small mb-1" for="inputBirthday">كلمة
+									المرور الجديدة</label> <input class="form-control" id="inputBirthday"
+																  type="password" name="birthday" placeholder="كلمة المرور الجديدة">
+
+							</div>
+						</div>
+						<!-- زر حفظ التغييرات-->
+						<button class="btn col-8 offset-2 primary-background text-white"
+								type="submit">حفظ التغييرات</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
