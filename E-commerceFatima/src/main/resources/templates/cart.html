@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{./styles.css}">
+    <script th:src="@{./main.js}" defer></script>
+</head>
+<body>
+<div th:replace="layout/header :: header"></div>
+
+<div class="container mt-5">
+    <h2>Shopping Cart</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Loop through cart items from backend and display them -->
+        <tr th:each="cartItem : ${cartItems}">
+            <td th:text="${cartItem.produit.productName}"></td>
+            <td th:text="${cartItem.produit.productPrice}"></td>
+            <td th:text="${cartItem.quantity}"></td>
+            <td th:text="${cartItem.totalPrice}"></td>
+            <td>
+                <a th:href="@{'/cart/remove/' + ${cartItem.cartId}}" class="btn btn-danger">Remove</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Total: $<span th:text="${totalAmount}"></span></p>
+    <a th:href="@{'/order/checkout'}" class="btn btn-primary">Proceed to Checkout</a>
+</div>
+
+<div th:replace="layout/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{./styles.css}">
+    <script th:src="@{./main.js}" defer></script>
+</head>
+<body>
+<div th:replace="layout/header :: header"></div>
+
+<div class="container mt-5">
+    <h2>Product List</h2>
+    <div class="row">
+        <!-- Loop through products from backend and display them -->
+        <div th:each="produit : ${products}" class="col-md-4 mb-4">
+            <div class="card">
+                <img th:src="@{'/images/' + ${produit.image}}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 th:text="${produit.productName}" class="card-title"></h5>
+                    <p th:text="${produit.productDescription}" class="card-text"></p>
+                    <p th:text="${'$' + produit.productPrice}" class="card-text"></p>
+                    <a th:href="@{'/cart/add/' + ${produit.productId}}" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="layout/footer :: footer"></div>
+</body>
+</html>
