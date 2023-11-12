@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liste des Produits</title>
+</head>
+<body>
+    <h1>Liste des Produits</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prix</th>
+                <!-- Ajoutez d'autres en-têtes si nécessaire -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Utilisez Thymeleaf pour itérer sur la liste de produits et afficher chaque produit -->
+            <tr th:each="p : ${produit}">
+                <td th:text="${p.nom}"></td>
+                <td th:text="${p.prix}"></td>
+                <!-- Ajoutez d'autres colonnes si nécessaire -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
