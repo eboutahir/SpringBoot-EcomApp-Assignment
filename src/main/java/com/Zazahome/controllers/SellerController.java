@@ -26,12 +26,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.storewala.daos.CategoryRepository;
-import com.storewala.daos.ProductRepository;
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.Category;
-import com.storewala.entities.Product;
-import com.storewala.entities.User;
+import com.Zazahome.daos.CategoryRepository;
+import com.Zazahome.daos.ProductRepository;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.Category;
+import com.Zazahome.entities.Product;
+import com.Zazahome.entities.User;
 
 @Controller
 @RequestMapping("/seller")

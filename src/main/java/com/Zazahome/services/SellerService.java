@@ -1,11 +1,10 @@
-package com.storewala.services;
+package com.ZazaHome.services;
 
-import com.storewala.daos.CategoryRepository;
-import com.storewala.daos.ProductRepository;
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.Category;
-import com.storewala.entities.Product;
-import com.storewala.entities.User;
+import com.Zazahome.daos.CategoryRepository;
+import com.Zazahome.daos.ProductRepository;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.Product;
+import com.Zazahome.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -14,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;

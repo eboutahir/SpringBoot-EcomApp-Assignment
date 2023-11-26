@@ -123,8 +123,19 @@ public class User {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	
+
+	@Column(name = "user_address")
+	private String address;
+
+	// Other existing fields and methods...
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
 	@Override
 	public String toString() {

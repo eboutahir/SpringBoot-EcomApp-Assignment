@@ -23,16 +23,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.storewala.daos.CategoryRepository;
-import com.storewala.daos.CommentRepository;
-import com.storewala.daos.ProductRepository;
-import com.storewala.daos.UnbanRequestRepository;
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.Category;
-import com.storewala.entities.Comment;
-import com.storewala.entities.Product;
-import com.storewala.entities.UnbanRequest;
-import com.storewala.entities.User;
+import com.Zazahome.daos.CategoryRepository;
+import com.Zazahome.daos.CommentRepository;
+import com.Zazahome.daos.ProductRepository;
+import com.Zazahome.daos.UnbanRequestRepository;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.Category;
+import com.Zazahome.entities.Comment;
+import com.Zazahome.entities.Product;
+import com.Zazahome.entities.UnbanRequest;
+import com.Zazahome.entities.User;
 
 @Controller
 public class MainController {
@@ -71,7 +71,7 @@ public class MainController {
 		List<Product> products = this.productRepo.getProducts();
 		List<Category> categories = this.categoryRepo.getCategories();
 
-		m.addAttribute("title", "StoreWala | Start Shopping Now!");
+		m.addAttribute("title", "ZazaHome | Start Shopping Now!");
 		m.addAttribute("categories", categories);
 		m.addAttribute("products", products);
 		return "index.html";
@@ -139,39 +139,6 @@ public class MainController {
 		return "redirect:/register";
 	}
 
-	/*
-	 * EXPLANATION OF REGISTER METHOD
-	 *
-	 * This function is a method that handles a POST request to the
-	 * "/process-registration" URL. It is used to register a new user in the
-	 * application.
-	 *
-	 * If the user input is not valid, return the user to the registration page.
-	 *
-	 * If the user did not select a role, redirect them to the registration page and
-	 * set a status message.
-	 *
-	 * If the user did not enter a confirm password, redirect them to the
-	 * registration page and set a status message.
-	 *
-	 * If the password and confirm password do not match, redirect the user to the
-	 * registration page and set a status message.
-	 *
-	 * Set the user's role based on their input.
-	 *
-	 * Set the user's account to be enabled, set the default profile picture, and
-	 * encrypt the password.
-	 *
-	 * Save the user to the database.
-	 *
-	 * If there is a database error, redirect the user to the registration page and
-	 * set a status message.
-	 *
-	 * If there is any other error, set a status message and print the stack trace.
-	 *
-	 * Set a success status message and redirect the user to the registration page.
-	 *
-	 */
 
 
 	@GetMapping("/login")
@@ -292,7 +259,7 @@ public class MainController {
 
 		User user = this.userRepo.loadUserByUserName(principal.getName());
 
-		m.addAttribute("title", user.getName() + " | StoreWala");
+		m.addAttribute("title", user.getName() + " | ZazaHome");
 		m.addAttribute("user", user);
 		return "profile";
 	}
@@ -370,28 +337,7 @@ public class MainController {
 		return "redirect:/showProduct?product_id=" + productId;
 	}
 
-	/*
-	 * Explanation of process comment method
-	 *
-	 * This above method is a method that handles requests to process a comment on a
-	 * product. It has several parameters, including the current HTTP session, the
-	 * comment text, the ID of the user who submitted the comment, and the ID of the
-	 * product the comment is related to.
-	 *
-	 * The method first retrieves the user object from the database using the
-	 * provided user ID, and then creates a new Comment object with the provided
-	 * comment text, product ID, user, and current date. The method then saves the
-	 * comment to the database and sets a flag to indicate that the comment was
-	 * saved successfully.
-	 *
-	 * If the flag is set, the method sets an attribute in the HTTP session,
-	 * redirects the user to the page for the product with the provided product ID,
-	 * and appends a query parameter to the URL indicating that the comment was
-	 * submitted successfully. Otherwise, the method sets an attribute in the HTTP
-	 * session and redirects the user to the same page, but without the query
-	 * parameter.
-	 *
-	 */
+
 
 	@GetMapping("/MyOrders")
 	public String orderStatus() {

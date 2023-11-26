@@ -1,4 +1,4 @@
-package com.storewala.services;
+package com.ZazaHome.services;
 
 import org.springframework.stereotype.Service;
 

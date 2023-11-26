@@ -9,13 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.User;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.User;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.storewala.*")
-public class StoreWalaApplication implements CommandLineRunner {
+@ComponentScan(basePackages = "com.Zazahome.*")
+public class ZazahomeApplication implements CommandLineRunner {
 
 	@Autowired
 	public BCryptPasswordEncoder passwordEncoder;
@@ -24,7 +24,7 @@ public class StoreWalaApplication implements CommandLineRunner {
 	private UserRepository userRepo;
 
 	public static void main(String[] args) {
-		SpringApplication.run(StoreWalaApplication.class, args);
+		SpringApplication.run(ZazahomeApplication.class, args);
 	}
 
 	@Override

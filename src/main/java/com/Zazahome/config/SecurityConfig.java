@@ -22,8 +22,8 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.User;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.User;
 
 
 @Configuration

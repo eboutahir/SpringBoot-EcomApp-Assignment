@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.storewala.entities.Category;
+import com.Zazahome.entities.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer> {

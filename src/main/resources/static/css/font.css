@@ -1,7 +1,6 @@
- body {
-
-    color: blue; /* Keep the text color as purple */
-  }
+body {
+  color: orange; /* Change the text color to orange */
+}
 @font-face {
   font-family: 'Poppins';
   font-style: normal;

@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.User;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.User;
 
 public class UserDetailsServiceImpl implements UserDetailsService {
 	

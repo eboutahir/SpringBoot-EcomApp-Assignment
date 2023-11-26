@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.storewala.entities.Order;
+import com.Zazahome.entities.Order;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer> {

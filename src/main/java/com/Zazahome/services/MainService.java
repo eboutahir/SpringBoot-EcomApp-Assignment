@@ -1,17 +1,15 @@
-package com.storewala.services;
+package com.ZazaHome.services;
 
-import com.storewala.daos.CategoryRepository;
-import com.storewala.daos.CommentRepository;
-import com.storewala.daos.ProductRepository;
-import com.storewala.daos.UnbanRequestRepository;
-import com.storewala.daos.UserRepository;
-import com.storewala.entities.Category;
-import com.storewala.entities.Comment;
-import com.storewala.entities.Product;
-import com.storewala.entities.UnbanRequest;
-import com.storewala.entities.User;
+import com.Zazahome.daos.CategoryRepository;
+import com.Zazahome.daos.CommentRepository;
+import com.Zazahome.daos.ProductRepository;
+import com.Zazahome.daos.UnbanRequestRepository;
+import com.Zazahome.daos.UserRepository;
+import com.Zazahome.entities.Category;
+import com.Zazahome.entities.Product;
+import com.Zazahome.entities.UnbanRequest;
+import com.Zazahome.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,14 +17,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 @Service
 public class MainService {
