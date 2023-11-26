@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mon Site E-commerce</title>
+</head>
+<body>
+
+    <header>
+      
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Panier</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br> <br><br> <br><br>
+    <section class="product-container">
+        <!-- Utilisez Thymeleaf pour itérer sur la liste de produits -->
+        <div th:each="produit : ${produits}" class="product">
+            <img th:src="@{/images/{imageName}(imageName=${produit.imageName})}" alt="Product">
+            <h2 th:text="${produit.name}">Nom du Produit</h2>
+            <p th:text="${produit.description}">Description du produit.</p>
+            <p class="price" th:text="'$' + ${produit.price}">Prix</p>
+            <button>Ajouter au panier</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mon Site E-commerce. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
