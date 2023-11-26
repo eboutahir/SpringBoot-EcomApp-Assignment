@@ -33,7 +33,9 @@ public class ProduitService
 
 
     public Produit updateProduct(Long produitId, Produit updatedProduit) {
-        Produit existingProduit = produitRepository.findById(produitId).orElse(null);
+        Produit existingProduit = produitRepository.findById(produitId)
+                .orElseThrow(() -> new EntityNotFoundException("Product not found with ID: " + produitId));
+
         if (existingProduit != null) {
 
             existingProduit.setName(updatedProduit.getName());

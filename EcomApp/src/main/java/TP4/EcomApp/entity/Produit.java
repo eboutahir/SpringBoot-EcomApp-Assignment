@@ -32,9 +32,9 @@ public class Produit {
     @Setter
     private int stockQuantity;
 
-    @Getter
-    @Setter
-    private String imageUrl;
+    //@Getter
+    //@Setter
+   // private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "categorie_id")
@@ -42,6 +42,14 @@ public class Produit {
     @Setter
     private Categorie categorie;
 
+    public Produit() {
+    }
 
+    public Produit(String name, String description, @NonNull double price, int stockQuantity) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+    }
 }
 
