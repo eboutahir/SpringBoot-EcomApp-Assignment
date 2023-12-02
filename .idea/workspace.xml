@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31b7e2e6-cb8b-4a48-bd26-5ceae12e17ad" name="Changes" comment="tp4E-com">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2Y5bXnuqRNxzFqUdT0NpSVKICAG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ecommerce__tp4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hdmac/Downloads/SpringBoot-EcomApp-Assignment&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31b7e2e6-cb8b-4a48-bd26-5ceae12e17ad" name="Changes" comment="" />
+      <created>1699818429844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699818429844</updated>
+    </task>
+    <task id="LOCAL-00001" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1699818724197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699818724198</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701336300188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336300188</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701336306527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336306527</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701336321700</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336321700</updated>
+    </task>
+    <task id="LOCAL-00005" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701336380014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336380014</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701336421844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336421844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701341490590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701341490590</updated>
+    </task>
+    <task id="LOCAL-00008" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701550409334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701550409334</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tp4E-com">
+      <option name="closed" value="true" />
+      <created>1701553931462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701553931462</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tp4E-com" />
+    <option name="LAST_COMMIT_MESSAGE" value="tp4E-com" />
+  </component>
+</project>
