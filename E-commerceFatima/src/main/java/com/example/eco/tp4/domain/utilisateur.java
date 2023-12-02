@@ -24,8 +24,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.nico.store.store.domain.security.Authority;
-import com.nico.store.store.domain.security.UserRole;
+import com.example.eco.tp4domain.security.Authority;
+import com.example.eco.tp4domain.security.UserRole;
 
 @NamedEntityGraph(
 	name= "UserComplete",
