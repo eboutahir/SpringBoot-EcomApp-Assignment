@@ -1,4 +1,4 @@
-package com.nico.store.store.repository;
+package com.example.eco.tp4.repository;
 
 import org.springframework.data.repository.CrudRepository;
 

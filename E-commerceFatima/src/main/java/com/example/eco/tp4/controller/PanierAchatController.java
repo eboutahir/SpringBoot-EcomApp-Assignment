@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.nico.store.store.domain.Article;
-import com.nico.store.store.domain.CartItem;
-import com.nico.store.store.domain.ShoppingCart;
-import com.nico.store.store.domain.User;
-import com.nico.store.store.service.ArticleService;
-import com.nico.store.store.service.ShoppingCartService;
+import  com.example.eco.tp4.domain.Article;
+import  com.example.eco.tp4.domain.CartItem;
+import  com.example.eco.tp4.domain.ShoppingCart;
+import  com.example.eco.tp4.domain.User;
+import  com.example.eco.tp4.service.ArticleService;
+import  com.example.eco.tp4.service.ShoppingCartService;
 
 @Controller
 @RequestMapping("/shopping-cart")

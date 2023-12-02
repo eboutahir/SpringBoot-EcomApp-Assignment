@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import javax.websocket.server.PathParam;
 
@@ -10,10 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nico.store.store.domain.Article;
-import com.nico.store.store.form.ArticleFilterForm;
-import com.nico.store.store.service.ArticleService;
-import com.nico.store.store.type.SortFilter;
+import  com.example.eco.tp4.domain.Article;
+import  com.example.eco.tp4.form.ArticleFilterForm;
+import  com.example.eco.tp4.service.ArticleService;
+import  com.example.eco.tp4.type.SortFilter;
 
 @Controller
 public class StoreController {

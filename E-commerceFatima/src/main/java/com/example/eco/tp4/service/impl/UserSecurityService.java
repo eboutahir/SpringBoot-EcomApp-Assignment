@@ -1,4 +1,4 @@
-package com.nico.store.store.service.impl;
+package com.example.eco.tp4.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

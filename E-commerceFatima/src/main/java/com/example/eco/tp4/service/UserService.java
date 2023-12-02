@@ -1,4 +1,4 @@
-package com.nico.store.store.service;
+package com.example.eco.tp4.service;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.nico.store.store.repository;
+package  com.example.eco.tp4.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,8 +13,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.nico.store.store.domain.Article;
-import com.nico.store.store.domain.ArticleBuilder;
+import  com.example.eco.tp4.domain.Article;
+import  com.example.eco.tp4.domain.ArticleBuilder;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

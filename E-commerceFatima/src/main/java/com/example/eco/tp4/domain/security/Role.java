@@ -1,4 +1,4 @@
-package com.nico.store.store.domain.security;
+package com.example.eco.tp4.domain.security;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,6 +23,7 @@ public class Role {
 	private String name;
 	
 	@OneToMany(mappedBy = "role", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	////////daba had collection de type userrole
 	private Set<UserRole> userRoles = new HashSet<>();
 	
 	public Role() {		

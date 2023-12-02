@@ -1,4 +1,4 @@
-package com.nico.store.store.type;
+package com.example.eco.tp4.type;
 
 import org.springframework.data.domain.Sort;
 

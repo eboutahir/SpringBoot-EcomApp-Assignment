@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.nico.store.store.domain.Article;
-import com.nico.store.store.domain.ArticleBuilder;
-import com.nico.store.store.domain.Brand;
-import com.nico.store.store.domain.Category;
-import com.nico.store.store.domain.Size;
-import com.nico.store.store.service.ArticleService;
+import  com.example.eco.tp4.domain.Article;
+import  com.example.eco.tp4.domain.ArticleBuilder;
+import  com.example.eco.tp4.domain.Brand;
+import  com.example.eco.tp4.domain.Category;
+import  com.example.eco.tp4.domain.Size;
+import  com.example.eco.tp4.service.ArticleService;
 
 @Controller
 @RequestMapping("/article")

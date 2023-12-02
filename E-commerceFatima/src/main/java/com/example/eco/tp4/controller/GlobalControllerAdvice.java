@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import java.util.Date;
 
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nico.store.store.domain.User;
-import com.nico.store.store.service.ShoppingCartService;
+import  com.example.eco.tp4.domain.User;
+import  com.example.eco.tp4.service.ShoppingCartService;
 
 @ControllerAdvice
 public class GlobalControllerAdvice {

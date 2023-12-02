@@ -33,7 +33,7 @@
             <div class="card">
               <div class="card-header">
                 <a href="#filter-price" data-toggle="collapse" aria-expanded="true" aria-controls="filter-price" role="button" class="h6">
-                  PRICE
+                  PRIX
                 </a>
               </div>
               <div id="filter-price" class="collapse show">
@@ -50,7 +50,7 @@
             <div class="card">
               <div class="card-header">
                 <a href="#filter-size" data-toggle="collapse" aria-expanded="true" aria-controls="filter-size" role="button" class="h6">
-                  SIZE
+                  Taille
                 </a>
               </div>
               <div id="filter-size" class="collapse show">
@@ -66,7 +66,7 @@
             <div class="card">
               <div class="card-header">
                 <a href="#filter-brands" data-toggle="collapse" aria-expanded="true" aria-controls="filter-brands" role="button" class="h6">
-                  BRANDS
+                  Marque
                 </a>
               </div>
               <div id="filter-brands" class="collapse show">
@@ -138,7 +138,7 @@
                 <div class="card-body">
                   <a th:href="@{/article-detail?id=}+${article.id}"><img class="card-img-top" th:src="${article.picture} ? '/image/article/pictures/'+${article.picture}+'.jpg' : '/image/article/itemexample.jpg'" alt="Card image cap"></a>
                   <a th:href="@{/article-detail?id=}+${article.id}" class="card-title" th:text="${article.title}"></a>
-                  <div class="price"><span class="h5" th:text="'$'+${#numbers.formatDecimal(article.price, 0, T(Math).round(article.price) == article.price ? 0 : 2)}"> </span></div>
+                  <div class="price"><span class="h5" th:text="'DH'+${#numbers.formatDecimal(article.price, 0, T(Math).round(article.price) == article.price ? 0 : 2)}"> </span></div>
                 </div>              
               </div>
           </div>      

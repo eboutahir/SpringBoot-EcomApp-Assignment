@@ -1,4 +1,4 @@
-package com.nico.store.store.dto;
+package com.example.eco.tp4.dto;
 
 public class UserDTO {
 

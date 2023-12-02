@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nico.store.store.domain.Article;
-import com.nico.store.store.service.ArticleService;
+import  com.example.eco.tp4.domain.Article;
+import  com.example.eco.tp4.service.ArticleService;
 
 @Controller
 public class HomeController {

@@ -1,4 +1,4 @@
-package com.nico.store.store.domain.security;
+package com.example.eco.tp4.domain.security;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.nico.store.store.domain.User;
+import  com.example.eco.tp4.domain.User;
 
 @Entity
 @Table(name="user_role")

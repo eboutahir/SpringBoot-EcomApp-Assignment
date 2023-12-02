@@ -1,4 +1,4 @@
-package com.nico.store.store;
+package com.example.eco.tp4;
 
 import java.util.Arrays;
 

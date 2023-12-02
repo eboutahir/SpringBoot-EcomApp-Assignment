@@ -1,4 +1,4 @@
-package com.nico.store.store.domain;
+package com.example.eco.tp4.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

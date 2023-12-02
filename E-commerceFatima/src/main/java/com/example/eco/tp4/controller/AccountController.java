@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import java.security.Principal;
 import java.util.Arrays;
@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.nico.store.store.domain.Address;
-import com.nico.store.store.domain.Order;
-import com.nico.store.store.domain.User;
-import com.nico.store.store.service.OrderService;
-import com.nico.store.store.service.UserService;
-import com.nico.store.store.service.impl.UserSecurityService;
+import  com.example.eco.tp4.domain.Address;
+import  com.example.eco.tp4.domain.Order;
+import  com.example.eco.tp4.domain.User;
+import  com.example.eco.tp4.service.OrderService;
+import  com.example.eco.tp4.service.UserService;
+import  com.example.eco.tp4.service.impl.UserSecurityService;
 
 import utility.SecurityUtility;
 

@@ -1,4 +1,4 @@
-package com.nico.store.store.domain.security;
+package com.example.eco.tp4.domain.security;
 
 import org.springframework.security.core.GrantedAuthority;
 

@@ -1,4 +1,4 @@
-package com.nico.store.store.controller;
+package com.example.eco.tp4.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.nico.store.store.domain.Address;
-import com.nico.store.store.domain.Order;
-import com.nico.store.store.domain.Payment;
-import com.nico.store.store.domain.Shipping;
-import com.nico.store.store.domain.ShoppingCart;
-import com.nico.store.store.domain.User;
-import com.nico.store.store.service.OrderService;
-import com.nico.store.store.service.ShoppingCartService;
+import  com.example.eco.tp4.domain.Address;
+import  com.example.eco.tp4.domain.Order;
+import  com.example.eco.tp4.domain.Payment;
+import  com.example.eco.tp4.domain.Shipping;
+import  com.example.eco.tp4.domain.ShoppingCart;
+import  com.example.eco.tp4.domain.User;
+import  com.example.eco.tp4.service.OrderService;
+import  com.example.eco.tp4.service.ShoppingCartService;
 
 @Controller
 public class CheckoutControler {

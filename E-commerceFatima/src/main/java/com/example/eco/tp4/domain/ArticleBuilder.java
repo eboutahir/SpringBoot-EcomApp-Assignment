@@ -1,4 +1,4 @@
-package com.nico.store.store.domain;
+package com.example.eco.tp4.domain;
 
 import java.util.HashSet;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.nico.store.store.form;
+package com.example.eco.tp4.form;
 
 public class UserProfileForm {
 

@@ -1,4 +1,4 @@
-package com.nico.store.store.domain;
+ com.example.eco.tp4
 
 import java.util.Set;
 
