@@ -203,4 +203,33 @@ public class Product {
 		return highlight + "...";
 	}
 
+    public Object getTitle() {
+		return null;
+	}
+
+	public void setTitle(Object title) {
+	}
+
+	public int getBrand() {
+		return 0;
+	}
+
+	public void setDiscountPrice(int discountPrice) {
+	}
+
+	public Object getStock() {
+		return null;
+	}
+
+	public void setStock(Object stock) {
+	}
+
+	public void setBrand(int brand) {
+	}
+
+	public void setSuspended(boolean b) {
+	}
+
+	public void setAvailable(boolean available) {
+	}
 }

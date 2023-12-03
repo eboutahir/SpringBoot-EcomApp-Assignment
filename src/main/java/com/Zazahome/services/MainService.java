@@ -1,14 +1,11 @@
-package com.ZazaHome.services;
+package com.Zazahome.services;
 
 import com.Zazahome.daos.CategoryRepository;
 import com.Zazahome.daos.CommentRepository;
 import com.Zazahome.daos.ProductRepository;
 import com.Zazahome.daos.UnbanRequestRepository;
 import com.Zazahome.daos.UserRepository;
-import com.Zazahome.entities.Category;
-import com.Zazahome.entities.Product;
-import com.Zazahome.entities.UnbanRequest;
-import com.Zazahome.entities.User;
+import com.Zazahome.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -43,6 +40,40 @@ public class MainService {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
+    public static void saveCategory(Category category) {
+    }
+
+    public static List<Comment> getAllComments(Integer productId) {
+        return null;
+    }
+
+    public static void processCheckout(Integer[] productIds, Integer[] quantities) {
+    }
+
+    public static void changePassword(String currentPassword, String newPassword, String confirmPassword) {
+    }
+
+    public static void updateUserDetails(User updatedUser) {
+    }
+
+    public static void deleteProduct(Integer productId) {
+    }
+
+    public static void processComment(Integer productId, String comment, String name) {
+    }
+
+    public static void saveProduct(Product product, List<String> images, Integer selectedProductCategory) {
+    }
+
+    public static void updateComment(Integer commentId, String updatedComment, String name) {
+    }
+
+    public static void deleteComment(Integer commentId, String name) {
+    }
+
+    public static void deleteCategory(Integer categoryId) {
+    }
 
     public void prepareHomeView(Model m, Principal principal) {
         if (principal != null) {
@@ -106,7 +137,7 @@ public class MainService {
         return null;
     }
 
-    public String processComment(HttpSession httpSession, String comment, Integer userId, Integer productId) {
+    public static String processComment(HttpSession httpSession, String comment, Integer userId, Integer productId) {
         return comment;
     }
 

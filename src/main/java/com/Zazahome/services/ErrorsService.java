@@ -1,4 +1,4 @@
-package com.ZazaHome.services;
+package com.Zazahome.services;
 
 import org.springframework.stereotype.Service;
 

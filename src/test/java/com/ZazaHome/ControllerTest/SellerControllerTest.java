@@ -1,4 +1,4 @@
-package com.ZazaHome;
+package com.ZazaHome.ControllerTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +10,16 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class AdminControllerTest {
+public class SellerControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void testAdminHome() throws Exception {
-        this.mockMvc.perform(MockMvcRequestBuilders.get("/admin/home"))
+    public void testSellerHome() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/seller/home"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("admin/index"))
-                .andExpect(MockMvcResultMatchers.model().attributeExists("title", "user", "users", "products", "categories", "category"));
+                .andExpect(MockMvcResultMatchers.view().name("seller/index"))
+                .andExpect(MockMvcResultMatchers.model().attributeExists("title", "product", "categories", "user", "products"));
     }
 }
-

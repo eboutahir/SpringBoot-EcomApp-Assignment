@@ -92,4 +92,13 @@ public class AdminService {
         httpSession.setAttribute("status", "went-wrong");
         return "";
     }
+
+    public void setUserRepo(UserRepository userRepositoryMock) {
+    }
+
+    public void setCategoryRepo(CategoryRepository categoryRepositoryMock) {
+    }
+
+    public void setProductRepo(ProductRepository productRepositoryMock) {
+    }
 }

@@ -1,4 +1,4 @@
-package com.ZazaHome.services;
+package com.Zazahome.services;
 
 import com.Zazahome.daos.CategoryRepository;
 import com.Zazahome.daos.ProductRepository;

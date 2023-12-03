@@ -143,12 +143,11 @@ public class User {
 				+ ", phone=" + phone + ", isEnable=" + isEnable + ", profile=" + profile + "]";
 	}
 
-	
-	
-	
-	
-	
-	
-	
 
+    public void setUsername(String username) {
+    }
+
+	public String getUsername() {
+		return null;
+	}
 }
