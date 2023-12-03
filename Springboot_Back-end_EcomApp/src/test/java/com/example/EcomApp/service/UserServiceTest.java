@@ -62,4 +62,39 @@ public class UserServiceTest {
         assertNotNull(registeredUser);
         assertEquals(newUserDto.getLogin(), registeredUser.getLogin());
     }
+
+    @Test
+    public void testLogin_InvalidCredentials() {
+        CredentialsDto invalidCredentials = new CredentialsDto("invalidUsername", "invalidPassword");
+
+        when(userRepositories.findByLogin(invalidCredentials.getLogin())).thenReturn(Optional.empty());
+
+        UserDto loggedInUser = userService.login(invalidCredentials);
+
+        assertNull(loggedInUser);
+    }
+
+    @Test
+    public void testRegister_ExistingUser() {
+        SigUpDto existingUserDto = new SigUpDto("John", "Doe", "existingUser", "password");
+        User existingUser = new User(1L, "John", "Doe", "existingUser", "hashedPassword");
+
+        when(userRepositories.findByLogin(existingUserDto.getLogin())).thenReturn(Optional.of(existingUser));
+
+        UserDto registeredUser = userService.register(existingUserDto);
+
+        assertNull(registeredUser);
+    }
+
+
+    @Test
+    public void testLogin_NullCredentials() {
+        CredentialsDto nullCredentials = new CredentialsDto(null, null);
+
+        UserDto loggedInUser = userService.login(nullCredentials);
+
+        assertNull(loggedInUser);
+    }
+
+
 }

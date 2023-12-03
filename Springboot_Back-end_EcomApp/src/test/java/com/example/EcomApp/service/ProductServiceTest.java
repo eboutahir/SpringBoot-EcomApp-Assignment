@@ -107,4 +107,55 @@ public class ProductServiceTest {
     }
 
 
+    @Test
+    public void testCreateNullProduct() {
+        Product nullProduct = null;
+
+        when(productRepository.save(any(Product.class))).thenThrow(IllegalArgumentException.class);
+
+        assertThrows(IllegalArgumentException.class, () -> productService.createProduct(nullProduct));
+    }
+
+    @Test
+    public void testGetNonExistentProductById() {
+        Long nonExistentProductId = 100L;
+
+        when(productRepository.findById(nonExistentProductId)).thenReturn(Optional.empty());
+
+        Optional<Product> nonExistentProduct = productService.getById(nonExistentProductId);
+
+        assertFalse(nonExistentProduct.isPresent());
+    }
+
+    @Test
+    public void testUpdateNonExistentProduct() {
+        Long nonExistentProductId = 100L;
+        Product updatedProduct = new Product(nonExistentProductId, "Updated Product", "image.jpg", "Updated Description", "Updated Category", 59.99);
+
+        when(productRepository.findById(nonExistentProductId)).thenReturn(Optional.empty());
+
+        Product result = productService.updateProduct(nonExistentProductId, updatedProduct);
+
+        assertNull(result);
+    }
+
+    @Test
+    public void testExtremeProductPrice() {
+        Product highPriceProduct = new Product(1L, "High Price Product", "image.jpg", "Description", "Category", Double.MAX_VALUE);
+        Product negativePriceProduct = new Product(2L, "Negative Price Product", "image.jpg", "Description", "Category", -100);
+
+        when(productRepository.save(any(Product.class))).thenReturn(highPriceProduct);
+
+        Product savedHighPriceProduct = productService.createProduct(highPriceProduct);
+        Product savedNegativePriceProduct = productService.createProduct(negativePriceProduct);
+
+        assertNotNull(savedHighPriceProduct);
+        assertEquals(Double.MAX_VALUE, savedHighPriceProduct.getPrice(), 0);
+        assertNull(savedNegativePriceProduct);
+    }
+
+
+
+
+
 }
