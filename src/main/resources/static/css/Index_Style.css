@@ -1,0 +1,136 @@
+     /* Style pour la barre de navigation */
+.header_section {
+  background-color: #333; /* Couleur de fond de la barre de navigation */
+  color: white; /* Couleur du texte */
+  padding: 10px 0; /* Espacement intérieur de la barre de navigation */
+}
+
+.navbar-brand span {
+  font-size: 24px; /* Taille de la police pour le texte du brand */
+  font-weight: bold; /* Gras pour le texte du brand */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Espacement entre les éléments du menu */
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Couleur du texte des liens */
+  font-weight: bold; /* Gras pour le texte des liens */
+}
+
+.navbar-nav .nav-link:hover {
+  color: yellow; /* Couleur du texte des liens au survol */
+}
+
+/* Style pour l'icône du panier */
+.cart-link .label {
+  background-color: red; /* Couleur de fond pour le badge de quantité */
+  color: white; /* Couleur du texte du badge de quantité */
+  border-radius: 50%; /* Bord arrondi pour le badge */
+  padding: 3px 8px; /* Espacement intérieur du badge */
+  font-size: 12px; /* Taille de la police du badge */
+  position: absolute; /* Position absolue pour le badge */
+  top: 0; /* Positionnement en haut */
+  right: 0; /* Positionnement à droite */
+}
+
+/* Style pour l'icône utilisateur */
+.fa-user {
+  font-size: 20px; /* Taille de l'icône utilisateur */
+  margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+
+/* Style pour l'icône du panier */
+.fa-shopping-cart {
+  font-size: 20px; /* Taille de l'icône du panier */
+  margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* Style pour la section de carrousel */
+.slider_section {
+  padding: 50px 0; /* Espacement intérieur de la section */
+  background-color: #f5f5f5; /* Couleur de fond de la section */
+}
+
+/* Style pour les titres et les paragraphes */
+.detail-box h1 {
+  font-size: 32px; /* Taille de police pour les titres */
+  font-weight: bold; /* Gras pour les titres */
+  margin-bottom: 20px; /* Espacement en bas des titres */
+}
+
+.detail-box p {
+  font-size: 18px; /* Taille de police pour les paragraphes */
+  line-height: 1.6; /* Hauteur de ligne pour les paragraphes */
+}
+
+/* Style pour l'image du carrousel */
+.img-box img {
+  width: 100%; /* Image prend la largeur de son conteneur */
+  height: auto; /* Hauteur automatique en fonction de la largeur */
+}
+
+.carousel_btn_box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Ajustement de l'espacement des boutons */
+  box-sizing: border-box; /* Boîte avec padding inclus dans la largeur */
+
+  /* Ajout de z-index pour placer au-dessus du carousel */
+  z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #555; /* Couleur de fond au survol des boutons */
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/* Style pour la section de pied de page */
+.footer_section {
+  background-color: #333; /* Couleur de fond du pied de page */
+  color: white; /* Couleur du texte du pied de page */
+  padding: 20px 0; /* Espacement intérieur du pied de page */
+}
+
+/* Style pour le texte du pied de page */
+.footer_section p {
+  margin: 0; /* Supprimer les marges par défaut */
+  text-align: center; /* Centrer le texte */
+  font-size: 14px; /* Taille de police du texte */
+}
+
+/* Style pour le lien dans le pied de page */
+.footer_section p a {
+  color: white; /* Couleur du lien */
+  text-decoration: underline; /* Soulignement du lien */
+}
+
+/* Style pour le lien au survol */
+.footer_section p a:hover {
+  color: #bbb; /* Couleur du lien au survol */
+}
