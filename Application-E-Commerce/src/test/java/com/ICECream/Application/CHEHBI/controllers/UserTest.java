@@ -27,43 +27,43 @@ class UserTest {
     @Test
     void testGetUsername() {
         User user = new User();
-        user.setUsername("testuser");
+        user.setUsername("Manal");
         assertEquals("testuser", user.getUsername());
     }
 
     @Test
     void testSetUsername() {
         User user = new User();
-        user.setUsername("testuser");
+        user.setUsername("Manal");
         assertEquals("testuser", user.getUsername());
     }
 
     @Test
     void testGetPassword() {
         User user = new User();
-        user.setPassword("testpassword");
+        user.setPassword("1234567");
         assertEquals("testpassword", user.getPassword());
     }
 
     @Test
     void testSetPassword() {
         User user = new User();
-        user.setPassword("testpassword");
+        user.setPassword("12345678");
         assertEquals("testpassword", user.getPassword());
     }
 
     @Test
     void testGetEmail() {
         User user = new User();
-        user.setEmail("test@example.com");
-        assertEquals("test@example.com", user.getEmail());
+        user.setEmail("adam@example.com");
+        assertEquals("chehbi@example.com", user.getEmail());
     }
 
     @Test
     void testSetEmail() {
         User user = new User();
-        user.setEmail("test@example.com");
-        assertEquals("test@example.com", user.getEmail());
+        user.setEmail("manal@example.com");
+        assertEquals("chehbi@example.com", user.getEmail());
     }
 
     @Test
