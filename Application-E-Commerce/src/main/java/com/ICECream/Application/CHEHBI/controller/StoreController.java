@@ -19,8 +19,12 @@ public class StoreController {
 	
 	@Autowired
 	private ArticleService articleService;
-	
-	@RequestMapping("/store")
+
+	public StoreController(ArticleService articleServiceMock) {
+
+	}
+
+    @RequestMapping("/store")
 	public String store(@ModelAttribute("filters") ArticleFilterForm filters, Model model) {
 		Integer page = filters.getPage();			
 		int pagenumber = (page == null ||  page <= 0) ? 0 : page-1;

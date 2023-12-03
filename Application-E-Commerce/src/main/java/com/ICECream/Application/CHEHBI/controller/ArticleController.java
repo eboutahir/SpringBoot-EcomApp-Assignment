@@ -26,8 +26,12 @@ public class ArticleController {
 
 	@Autowired
 	private ArticleService articleService;
-	
-	@RequestMapping("/add")
+
+	public ArticleController(ArticleService articleServiceMock) {
+
+	}
+
+    @RequestMapping("/add")
 	public String addArticle(Model model) {
 		Article article = new Article();
 		model.addAttribute("article", article);

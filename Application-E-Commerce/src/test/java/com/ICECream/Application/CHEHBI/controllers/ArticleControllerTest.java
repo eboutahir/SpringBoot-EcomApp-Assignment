@@ -22,7 +22,7 @@ class ArticleControllerTest {
 
     @BeforeEach
     void setUp() {
-        // Initialiser les objets nécessaires avant chaque test
+
         articleServiceMock = mock(ArticleService.class);
         articleController = new ArticleController(articleServiceMock);
     }
@@ -38,7 +38,7 @@ class ArticleControllerTest {
         assertTrue(modelMock.containsAttribute("allBrands"));
         assertTrue(modelMock.containsAttribute("allCategories"));
 
-        verifyZeroInteractions(articleServiceMock); // Vérifie qu'aucune interaction directe avec le service n'a eu lieu
+        verifyZeroInteractions(articleServiceMock);
     }
 
     @Test
@@ -58,10 +58,7 @@ class ArticleControllerTest {
 
         assertEquals("redirect:article-list", viewName);
 
-        verify(articleServiceMock).saveArticle(any(Article.class)); // Vérifie que la méthode saveArticle a été appelée avec n'importe quel objet Article
+        verify(articleServiceMock).saveArticle(any(Article.class));
+
     }
-
-    // Ajoutez d'autres tests pour les méthodes restantes du contrôleur ArticleController
-    // ...
-
 }

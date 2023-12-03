@@ -47,34 +47,33 @@ public class AccountControllerTest {
 
     @Test
     public void testMyProfile() {
-        // Arrange
+
         User user = new User();
         when(authentication.getPrincipal()).thenReturn(user);
 
-        // Act
+
         String result = accountController.myProfile(model, authentication);
 
-        // Assert
+
         assertEquals("myProfile", result);
         verify(model).addAttribute("user", user);
     }
 
     @Test
     public void testMyOrders() {
-        // Arrange
+
         User user = new User();
         when(authentication.getPrincipal()).thenReturn(user);
         List<Order> orders = Collections.emptyList();
         when(orderService.findByUser(user)).thenReturn(orders);
 
-        // Act
+
         String result = accountController.myOrders(model, authentication);
 
-        // Assert
+
         assertEquals("myOrders", result);
         verify(model).addAttribute("user", user);
         verify(model).addAttribute("orders", orders);
     }
 
-    // Ajoutez d'autres tests pour les autres méthodes du contrôleur AccountController
 }
