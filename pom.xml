@@ -16,7 +16,7 @@
 	<description>project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<start-class>com.EcommerceSpringSecurityRoleBasedApplication</start-class>
+		<start-class>Ecomerce.EcommerceSpringSecurityRoleBasedApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
