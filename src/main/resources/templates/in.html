@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/stylelogin.css" />
+    <title>Sign in & Sign up Form</title>
+    <head th:replace="common/header :: common-header" />
+
+  </head>
+  <body>
+  <div th:replace="common/header :: navbar"> </div>
+
+  <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form th:action="@{/login}" method="post" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input required="required" type="text" class="form-control" placeholder="Username" name="username">
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input required="required" type="password" class="form-control" placeholder="Password" name="password">
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form th:action="@{/new-user}" method="post" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input required="required" type="text" class="form-control" th:classappend="${usernameExists} ? is-invalid"
+                     placeholder="Username" name="username" th:value="${username}">
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input required="required" type="email" class="form-control" th:classappend="${emailExists} ? is-invalid"
+                     name="email" placeholder="Email address" th:value="${email}">
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" required="required"
+                     class="form-control" name="new-password"
+                     placeholder="Password" autocomplete="new-password">
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="/image/log.png" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h1>مرحبا بكم في موقع تمورنا</h1>
+            <p>
+              <h1>             هنا تجد اجود التمور المغربية الصحراوية 🐫
+          </h1>
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="/image/register.png" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+  <div th:replace="common/header :: body-scripts"> </div>
+
+  </body>
+</html>
