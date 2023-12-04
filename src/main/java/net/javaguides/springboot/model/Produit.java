@@ -15,11 +15,17 @@ public class Produit {
     private String description;
     private double price;
     private String image;
+
+ 
+
     public Produit(String name, String description, double price, String image) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.image = image;
+        
+    }
+    public Produit() {
     }
     public Long getId() {
         return id;
@@ -59,4 +65,5 @@ public class Produit {
     public void setImage(String image) {
         this.image = image;
     }
+   
 }
