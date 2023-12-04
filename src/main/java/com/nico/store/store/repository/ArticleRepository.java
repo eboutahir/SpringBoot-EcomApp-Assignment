@@ -21,11 +21,11 @@ public interface ArticleRepository extends JpaRepository<Article, Long>, JpaSpec
 	
 	@Query("SELECT DISTINCT s.value FROM Size s")
 	List<String> findAllSizes();
-	
+
 	@Query("SELECT DISTINCT c.name FROM Category c")
 	List<String> findAllCategories();
 	
 	@Query("SELECT DISTINCT b.name FROM Brand b")
 	List<String> findAllBrands();
-	
+
 }

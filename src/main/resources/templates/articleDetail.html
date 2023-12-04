@@ -41,14 +41,6 @@
               <input hidden="hidden" th:field="*{article.id}">  
               <div class="form-row">
                 <div class="form-group col-sm-3">
-                  <label class="font-weight-bold d-block">Size</label>
-                  <select class="form-control" id="size" th:name="size">
-                    <option th:each="size : ${article.sizes}" th:value="${size.getValue()}" th:text="${size.getValue()}"></option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-sm-3">
                   <label class="font-weight-bold" for="quantity">Quantity</label>
                   <select class="form-control" id="quantity" th:name="qty">
                     <option>1</option>

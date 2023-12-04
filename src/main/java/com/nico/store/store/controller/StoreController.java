@@ -30,8 +30,6 @@ public class StoreController {
 																filters.getPricelow(), filters.getPricehigh(), 
 																filters.getSize(), filters.getCategory(), filters.getBrand(), filters.getSearch());	
 		model.addAttribute("allCategories", articleService.getAllCategories());
-		model.addAttribute("allBrands", articleService.getAllBrands());
-		model.addAttribute("allSizes", articleService.getAllSizes());
 		model.addAttribute("articles", pageresult.getContent());
 		model.addAttribute("totalitems", pageresult.getTotalElements());
 		model.addAttribute("itemsperpage", 9);
