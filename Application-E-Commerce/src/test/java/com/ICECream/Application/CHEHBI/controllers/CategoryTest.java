@@ -11,20 +11,20 @@ import java.util.Optional;
 class CategoryTest {
 
     @Test
-    void testGetId() {
+    void shouldReturnNullForIdWhenNotSet() {
         Category category = new Category();
         assertNull(category.getId());
     }
 
     @Test
-    void testSetId() {
+    void shouldSetAndGetId() {
         Category category = new Category();
         category.setId(1L);
         assertEquals(1L, Optional.ofNullable(category.getId()));
     }
 
     @Test
-    void testGetArticle() {
+    void shouldSetAndGetArticle() {
         Article article = new Article();
         Category category = new Category();
         category.setArticle(article);
@@ -32,29 +32,21 @@ class CategoryTest {
     }
 
     @Test
-    void testSetArticle() {
-        Article article = new Article();
-        Category category = new Category();
-        category.setArticle(article);
-        assertEquals(article, category.getArticle());
-    }
-
-    @Test
-    void testGetName() {
+    void shouldSetAndGetCategoryName() {
         Category category = new Category();
         category.setName("TestCategory");
         assertEquals("TestCategory", category.getName());
     }
 
     @Test
-    void testSetName() {
+    void shouldSetAndGetCategoryNameUsingSetter() {
         Category category = new Category();
         category.setName("TestCategory");
         assertEquals("TestCategory", category.getName());
     }
 
     @Test
-    void testParameterizedConstructor() {
+    void shouldCreateCategoryWithParameters() {
         Article article = new Article();
         Category category = new Category("TestCategory", article);
         assertEquals("TestCategory", category.getName());
@@ -62,7 +54,7 @@ class CategoryTest {
     }
 
     @Test
-    void testDefaultConstructor() {
+    void shouldCreateCategoryWithDefaultConstructor() {
         Category category = new Category();
         assertNull(category.getId());
         assertNull(category.getName());
@@ -70,7 +62,7 @@ class CategoryTest {
     }
 
     @Test
-    void testEquals() {
+    void shouldReturnTrueForEqualCategories() {
         Article article1 = new Article();
         article1.setId(1L);
 
@@ -88,7 +80,7 @@ class CategoryTest {
     }
 
     @Test
-    void testHashCode() {
+    void shouldReturnSameHashCodeForEqualCategories() {
         Article article1 = new Article();
         article1.setId(1L);
 

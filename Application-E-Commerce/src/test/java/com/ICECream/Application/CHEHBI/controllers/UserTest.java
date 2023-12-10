@@ -12,62 +12,41 @@ import java.util.Optional;
 class UserTest {
 
     @Test
-    void testGetId() {
+    void shouldReturnNullForIdWhenNotSet() {
         User user = new User();
         assertNull(user.getId());
     }
 
     @Test
-    void testSetId() {
+    void shouldSetAndGetId() {
         User user = new User();
         user.setId(1L);
         assertEquals(1L, Optional.ofNullable(user.getId()));
     }
 
     @Test
-    void testGetUsername() {
+    void shouldSetAndGetUsername() {
         User user = new User();
-        user.setUsername("Manal");
+        user.setUsername("testuser");
         assertEquals("testuser", user.getUsername());
     }
 
     @Test
-    void testSetUsername() {
+    void shouldSetAndGetPassword() {
         User user = new User();
-        user.setUsername("Manal");
-        assertEquals("testuser", user.getUsername());
-    }
-
-    @Test
-    void testGetPassword() {
-        User user = new User();
-        user.setPassword("1234567");
+        user.setPassword("testpassword");
         assertEquals("testpassword", user.getPassword());
     }
 
     @Test
-    void testSetPassword() {
+    void shouldSetAndGetEmail() {
         User user = new User();
-        user.setPassword("12345678");
-        assertEquals("testpassword", user.getPassword());
+        user.setEmail("test@example.com");
+        assertEquals("test@example.com", user.getEmail());
     }
 
     @Test
-    void testGetEmail() {
-        User user = new User();
-        user.setEmail("adam@example.com");
-        assertEquals("chehbi@example.com", user.getEmail());
-    }
-
-    @Test
-    void testSetEmail() {
-        User user = new User();
-        user.setEmail("manal@example.com");
-        assertEquals("chehbi@example.com", user.getEmail());
-    }
-
-    @Test
-    void testGetAddress() {
+    void shouldSetAndGetAddress() {
         User user = new User();
         Address address = new Address();
         user.setAddress(address);
@@ -75,23 +54,7 @@ class UserTest {
     }
 
     @Test
-    void testSetAddress() {
-        User user = new User();
-        Address address = new Address();
-        user.setAddress(address);
-        assertEquals(address, user.getAddress());
-    }
-
-    @Test
-    void testGetUserRoles() {
-        User user = new User();
-        UserRole userRole = new UserRole();
-        user.getUserRoles().add(userRole);
-        assertTrue(user.getUserRoles().contains(userRole));
-    }
-
-    @Test
-    void testSetUserRoles() {
+    void shouldSetAndGetUserRoles() {
         User user = new User();
         UserRole userRole = new UserRole();
         user.getUserRoles().add(userRole);

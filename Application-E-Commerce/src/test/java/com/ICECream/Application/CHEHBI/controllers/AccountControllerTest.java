@@ -46,34 +46,29 @@ public class AccountControllerTest {
     private Model model;
 
     @Test
-    public void testMyProfile() {
+    public void shouldReturnMyProfileView() {
 
         User user = new User();
         when(authentication.getPrincipal()).thenReturn(user);
 
-
         String result = accountController.myProfile(model, authentication);
-
 
         assertEquals("myProfile", result);
         verify(model).addAttribute("user", user);
     }
 
     @Test
-    public void testMyOrders() {
+    public void shouldReturnMyOrdersView() {
 
         User user = new User();
         when(authentication.getPrincipal()).thenReturn(user);
         List<Order> orders = Collections.emptyList();
         when(orderService.findByUser(user)).thenReturn(orders);
 
-
         String result = accountController.myOrders(model, authentication);
-
 
         assertEquals("myOrders", result);
         verify(model).addAttribute("user", user);
         verify(model).addAttribute("orders", orders);
     }
-
 }
