@@ -26,13 +26,17 @@ public class SecurityConfig {
                 .csrf((csrf) -> csrf.disable())
               //  .disable()
                .authorizeHttpRequests((authorize) -> authorize
-                       .requestMatchers("/product/**").hasAuthority("USER")
                        .requestMatchers("/auth/**").permitAll()
+                       .requestMatchers("/product/**").hasAuthority("ADMIN")
+                       .requestMatchers("/product/all").hasAuthority("USER")
+                       .requestMatchers("/order/**").hasAuthority("USER")
+                       .requestMatchers("/orderItem/**").hasAuthority("USER")
+                       .requestMatchers("/category/**").hasAuthority("ADMIN")
 
 
 
 
-                        .anyRequest().authenticated())
+                       .anyRequest().authenticated())
                 .sessionManagement(sessionManagement -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                // .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

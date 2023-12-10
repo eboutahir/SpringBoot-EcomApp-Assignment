@@ -9,7 +9,6 @@ public class AuthenticationProviderConfig {
 
     @Bean
     public AuthenticationProvider customAuthenticationProvider() {
-        //return new CustomAuthenticationProvider(); // Replace with your actual implementation
         return null;
     }
 }

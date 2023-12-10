@@ -40,17 +40,23 @@ public class CategoryServiceImp implements CategoryService {
 
     @Override
     public void deletedById(Long id) {
-        Category catD=categoryRepository.getReferenceById(id);
-        catD.set_deleted(true);
-        categoryRepository.save(catD);
-
+        Category catD = categoryRepository.getReferenceById(id);
+        if (catD != null) {
+            catD.set_deleted(true);
+            categoryRepository.save(catD);
+        } else {
+            throw new IllegalArgumentException("Category with ID " + id + " not found");
+        }
     }
 
     @Override
     public void enabledById(Long id) {
-        Category catEnabled=categoryRepository.getReferenceById(id);
-        catEnabled.set_deleted(false);
-        categoryRepository.save(catEnabled);
-
+        Category catEnabled = categoryRepository.getReferenceById(id);
+        if (catEnabled != null) {
+            catEnabled.set_deleted(false);
+            categoryRepository.save(catEnabled);
+        } else {
+            throw new IllegalArgumentException("Category with ID " + id + " not found");
+        }
     }
 }
