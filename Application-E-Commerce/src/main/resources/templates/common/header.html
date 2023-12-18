@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org./1999/xhtml" xmlns:sec="http://www.w3.org./1999/xhtml">
+<head th:fragment="common-header">
+
+    <meta charset="utf-8">
+    <title>iCREAM - Ice Cream Shop  </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style1.css" rel="stylesheet">
+  </head>
+
+
+<body>
+  <div th:fragment="navbar">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto font-weight-bold">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/}"> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/store}"> Store </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/shopping-cart/cart}">Shopping Cart
+            <span class="badge badge-primary badge-pill" style="vertical-align: top;" th:text="${shoppingCartItemNumber} > 0 ? ${shoppingCartItemNumber}"></span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto font-weight-bold">
+          <li class="nav-item">
+            <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}">My Account </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/my-profile}">My Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}"> Log Out </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" sec:authorize="hasRole('ADMIN')" th:href="@{/article/article-list}"> ADMIN PORTAL</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+  </div>
+
+  <div th:fragment="footer">
+
+    <div class="copyright">Copyright © 2023 ICECREAM CHEHBI All rights reserved</div>
+  </div>
+
+
+  <div th:fragment="body-scripts">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery
+          || document
+              .write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/datatables.min.js"></script>
+    <script src="/js/tagsinput.js"></script>
+    <script>feather.replace()</script>
+    <script type="text/javascript" src="/js/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    //prevent multiple form submission
+    $(function() {
+      $('form').submit(function(){
+        $("button[type='submit']", this)
+          .text("Please Wait...")
+          .attr('disabled', 'disabled');
+        return true;
+      });
+    });
+    </script>
+
+  </div>
+
+</body>
+
+</html>
